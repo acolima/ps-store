@@ -1,0 +1,74 @@
+.card {
+  background-color: lightblue;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  cursor: pointer;
+
+  img {
+    min-width: 100%;
+  }
+
+  &__label {
+    background-color: #000;
+    color: #fff;
+
+    font-size: 0.825rem;
+    font-weight: bold;
+
+    padding: 0.25rem 1rem;
+
+    position: absolute;
+    right: 0;
+    bottom: 4rem;
+  }
+
+  &__info {
+    background-color: #000000cc;
+    color: #fff;
+
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    font-weight: bold;
+
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .vertical-separator {
+      color: #0f5875;
+    }
+
+    .game-type {
+      font-weight: normal;
+    }
+
+    .console-type {
+      font-weight: normal;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .price {
+      font-size: 1.2rem;
+    }
+  }
+
+  &:hover {
+    transition: all 0.5s;
+    transform: scale(1.02);
+  }
+}
