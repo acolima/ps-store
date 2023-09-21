@@ -1,0 +1,41 @@
+.ps-store-menu {
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  background-color: #fff;
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+  &__logo {
+    position: absolute;
+    left: 10px;
+  }
+
+  &__nav-bar {
+    display: flex;
+    gap: 30px;
+
+    margin-left: 10px;
+
+    a {
+      padding: 2px 18px;
+      border-radius: 16px;
+    }
+
+    a:hover {
+      background-color: #f2f2f2;
+    }
+
+    a:focus {
+      background-color: #ced5da;
+    }
+  }
+}
