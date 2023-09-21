@@ -1,15 +1,16 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
 .ps-store-menu {
   padding: 10px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex($justifyContent: center);
 
   position: sticky;
   top: 0;
   z-index: 1;
 
-  background-color: #fff;
+  background-color: $c-white;
 
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -20,8 +21,7 @@
   }
 
   &__nav-bar {
-    display: flex;
-    gap: 30px;
+    @include flex($gap: 25px);
 
     margin-left: 10px;
 
@@ -31,11 +31,11 @@
     }
 
     a:hover {
-      background-color: #f2f2f2;
+      background-color: $c-light-gray-2;
     }
 
     a:focus {
-      background-color: #ced5da;
+      background-color: $c-gray;
     }
   }
 }

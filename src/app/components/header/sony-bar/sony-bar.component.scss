@@ -1,10 +1,12 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
 .sony-logo {
-  background-color: #000;
+  background-color: $c-black;
 
   padding: 5px;
 
-  display: flex;
-  justify-content: flex-end;
+  @include flex($justifyContent: flex-end);
 
   img {
     width: 80px;

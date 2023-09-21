@@ -1,5 +1,7 @@
+@import "src/scss/_themes";
+
 header {
   width: 100%;
 
-  background-color: #fff;
+  background-color: $c-white;
 }

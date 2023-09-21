@@ -1,16 +1,16 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
 .ps-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex($justifyContent: space-between);
 
   padding: 0 10px;
 
   &__nav-bar {
-    display: flex;
-    align-items: center;
+    @include flex();
 
     a {
-      color: gray;
+      color: $c-light-gray-1;
 
       font-size: 12px;
 
@@ -18,7 +18,7 @@
     }
 
     a:hover {
-      color: #005499;
+      color: $c-blue-1;
     }
 
     ng-icon {
@@ -27,17 +27,15 @@
   }
 
   &__buttons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    @include flex($gap: 10px);
 
     ng-icon {
-      color: #363636;
+      color: $c-dark-gray;
     }
 
     button {
-      background-color: #005499;
-      color: #fff;
+      background-color: $c-blue-1;
+      color: $c-white;
 
       padding: 2px 6px;
       border-radius: 14px;
