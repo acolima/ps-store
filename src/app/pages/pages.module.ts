@@ -4,9 +4,15 @@ import { GameCardComponent } from '../components/game-card/game-card.component';
 import { MainPageComponent } from './main/main-page.component';
 import { HeaderComponent } from '../components/header/header.component';
 import { HeaderModule } from '../components/header/header.module';
+import { BannerComponent } from '../components/banner/banner.component';
 
 @NgModule({
-  declarations: [GameCardComponent, HeaderComponent, MainPageComponent],
+  declarations: [
+    BannerComponent,
+    GameCardComponent,
+    HeaderComponent,
+    MainPageComponent,
+  ],
   imports: [CommonModule, HeaderModule],
   exports: [MainPageComponent],
 })
