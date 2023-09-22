@@ -1,0 +1,18 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
+.list {
+  padding: 0 20px;
+
+  header {
+    font-size: 20px;
+    color: $c-dark-gray;
+    font-weight: normal;
+
+    margin-bottom: 12px;
+  }
+
+  .games {
+    @include flex($gap: 10px);
+  }
+}

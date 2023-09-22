@@ -1,0 +1,59 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
+.card {
+  width: 260px;
+
+  @include flex($direction: column);
+
+  cursor: pointer;
+
+  &__poster {
+    position: relative;
+  }
+
+  img {
+    width: 260px;
+    height: 260px;
+
+    border-radius: 6px;
+
+    outline: 2px solid transparent;
+    padding: 3px;
+  }
+
+  img:hover {
+    outline: 2px solid $c-blue-1;
+  }
+
+  &__console-types {
+    @include flex($gap: 5px);
+
+    position: absolute;
+    left: 10px;
+    bottom: 15px;
+
+    span {
+      background-color: rgba(0, 0, 0, 0.9);
+
+      font-size: 9px;
+      color: #fff;
+
+      padding: 2px 6px;
+      border: 1px solid $c-white;
+    }
+  }
+
+  &__info {
+    font-size: 14px;
+
+    padding: 3px;
+
+    .price {
+      font-size: 13px;
+      color: $c-dark-gray;
+
+      margin-top: 5px;
+    }
+  }
+}
