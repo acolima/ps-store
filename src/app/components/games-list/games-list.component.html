@@ -1,15 +1,6 @@
 <section class="list">
   <header>{{ listTitle }}</header>
   <div class="games">
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
-    <app-game-card></app-game-card>
+    <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
   </div>
 </section>

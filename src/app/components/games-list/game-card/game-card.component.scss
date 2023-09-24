@@ -4,7 +4,7 @@
 .card {
   width: 260px;
 
-  @include flex($direction: column);
+  @include flex($direction: column, $alignItems: flex-start);
 
   cursor: pointer;
 

@@ -2,7 +2,7 @@
 @import "src/scss/_themes";
 
 .list {
-  padding: 0 20px;
+  padding: 0 20px 50px;
 
   header {
     font-size: 20px;
@@ -13,6 +13,13 @@
   }
 
   .games {
-    @include flex($gap: 10px);
+    padding: 10px 0;
+
+    @include flex($gap: 10px, $alignItems: flex-start);
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }

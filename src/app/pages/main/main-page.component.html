@@ -4,4 +4,8 @@
 
 <app-banner></app-banner>
 
-<app-games-list listTitle="10 melhores jogos no seu país"></app-games-list>
+<app-games-list
+  *ngFor="let list of lists"
+  [listTitle]="list.title"
+  [games]="list.games"
+></app-games-list>
