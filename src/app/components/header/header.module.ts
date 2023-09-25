@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SonyBarComponent } from './sony-bar/sony-bar.component';
 import { PsMenuComponent } from './ps-menu/ps-menu.component';
+import { HeaderComponent } from './header.component';
 
 import { NgIconsModule } from '@ng-icons/core';
 import {
@@ -11,11 +12,16 @@ import {
 import { PsStoreMenuComponent } from './ps-store-menu/ps-store-menu.component';
 
 @NgModule({
-  declarations: [PsMenuComponent, PsStoreMenuComponent, SonyBarComponent],
+  declarations: [
+    HeaderComponent,
+    PsMenuComponent,
+    PsStoreMenuComponent,
+    SonyBarComponent,
+  ],
   imports: [
     CommonModule,
     NgIconsModule.withIcons({ bootstrapChevronDown, bootstrapSearch }),
   ],
-  exports: [PsMenuComponent, PsStoreMenuComponent, SonyBarComponent],
+  exports: [HeaderComponent, PsStoreMenuComponent],
 })
 export class HeaderModule {}

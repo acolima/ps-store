@@ -4,6 +4,8 @@
 .list {
   padding: 0 20px 50px;
 
+  position: relative;
+
   header {
     font-size: 20px;
     color: $c-dark-gray;
@@ -13,7 +15,7 @@
   }
 
   .games {
-    padding: 10px 0;
+    padding: 10px 5px;
 
     @include flex($gap: 10px, $alignItems: flex-start);
     overflow: scroll;
@@ -21,5 +23,32 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  button {
+    background-color: $c-blue-1;
+    color: $c-white;
+
+    position: absolute;
+    top: 40%;
+
+    padding: 10px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    @include flex();
+
+    ng-icon {
+      font-size: 20px;
+    }
+  }
+
+  .forward-button {
+    right: 10px;
+  }
+
+  .back-button {
+    left: 10px;
   }
 }

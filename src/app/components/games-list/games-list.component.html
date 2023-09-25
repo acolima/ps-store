@@ -1,6 +1,24 @@
 <section class="list">
   <header>{{ listTitle }}</header>
-  <div class="games">
+  <div class="games" #list>
     <app-game-card *ngFor="let game of games" [game]="game"></app-game-card>
   </div>
+
+  <button
+    class="back-button"
+    type="button"
+    (click)="goBack()"
+    *ngIf="displayButton === 'back'"
+  >
+    <ng-icon name="bootstrapChevronLeft"></ng-icon>
+  </button>
+
+  <button
+    class="forward-button"
+    type="button"
+    (click)="goForward()"
+    *ngIf="displayButton === 'forward'"
+  >
+    <ng-icon name="bootstrapChevronRight"></ng-icon>
+  </button>
 </section>
