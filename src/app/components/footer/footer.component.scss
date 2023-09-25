@@ -1,0 +1,53 @@
+@import "src/scss/_mixins";
+@import "src/scss/_themes";
+
+footer {
+  width: 100%;
+
+  padding: 30px 70px;
+
+  background-color: $c-blue-2;
+  color: $c-white;
+
+  @include flex($direction: column, $alignItems: flex-start, $gap: 50px);
+
+  .logo {
+    width: 100%;
+
+    @include flex($gap: 30px);
+
+    div {
+      @include flex($gap: 10px);
+    }
+  }
+
+  .links {
+    width: 100%;
+
+    @include flex($justifyContent: space-between, $alignItems: flex-start);
+
+    a {
+      color: $c-white;
+
+      cursor: pointer;
+    }
+
+    a:hover {
+      filter: brightness(0.7);
+    }
+
+    div {
+      @include flex(
+        $direction: column,
+        $alignItems: flex-start,
+        $justifyContent: baseline,
+        $gap: 20px
+      );
+    }
+  }
+
+  p {
+    width: 100%;
+    text-align: center;
+  }
+}

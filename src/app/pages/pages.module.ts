@@ -6,11 +6,13 @@ import { HeaderModule } from '../components/header/header.module';
 import { BannerComponent } from '../components/banner/banner.component';
 import { GamesModule } from '../components/games-list/games.module';
 import { GamesListComponent } from '../components/games-list/games-list.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   declarations: [
     BannerComponent,
     GamesListComponent,
+    FooterComponent,
     HeaderComponent,
     MainPageComponent,
   ],
