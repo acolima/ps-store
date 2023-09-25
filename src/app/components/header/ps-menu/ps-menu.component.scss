@@ -1,3 +1,4 @@
+@import "src/scss/_media-queries";
 @import "src/scss/_mixins";
 @import "src/scss/_themes";
 
@@ -5,6 +6,8 @@
   @include flex($justifyContent: space-between);
 
   padding: 0 10px;
+
+  @include hide-on-mobile();
 
   &__nav-bar {
     @include flex();

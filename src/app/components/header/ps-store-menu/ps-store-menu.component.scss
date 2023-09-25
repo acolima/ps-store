@@ -1,10 +1,11 @@
+@import "src/scss/_media-queries";
 @import "src/scss/_mixins";
 @import "src/scss/_themes";
 
 .ps-store-menu {
   padding: 10px;
 
-  @include flex($justifyContent: center);
+  @include flex($justifyContent: space-between);
 
   position: sticky;
   top: 0;
@@ -15,18 +16,18 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
-  &__logo {
-    position: absolute;
-    left: 10px;
+  @include mobile-only() {
+    @include flex($direction: column, $alignItems: flex-start, $gap: 20px);
   }
 
   &__nav-bar {
-    @include flex($gap: 25px);
+    @include flex($gap: 25px, $justifyContent: center);
+    flex: 1;
 
-    margin-left: 10px;
+    overflow: scroll;
 
     a {
-      padding: 2px 18px;
+      padding: 2px 10px;
       border-radius: 16px;
     }
 
@@ -36,6 +37,13 @@
 
     a:focus {
       background-color: $c-gray;
+    }
+
+    @include mobile-only() {
+      width: 100%;
+      padding: 0;
+
+      @include flex($gap: 2px, $alignItems: flex-end);
     }
   }
 }

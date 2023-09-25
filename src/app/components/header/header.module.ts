@@ -9,7 +9,9 @@ import {
   bootstrapChevronDown,
   bootstrapSearch,
 } from '@ng-icons/bootstrap-icons';
+import { ionMenuSharp } from '@ng-icons/ionicons';
 import { PsStoreMenuComponent } from './ps-store-menu/ps-store-menu.component';
+import { PsMenuMobileComponent } from './ps-menu-mobile/ps-menu-mobile.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,15 @@ import { PsStoreMenuComponent } from './ps-store-menu/ps-store-menu.component';
     PsMenuComponent,
     PsStoreMenuComponent,
     SonyBarComponent,
+    PsMenuMobileComponent,
   ],
   imports: [
     CommonModule,
-    NgIconsModule.withIcons({ bootstrapChevronDown, bootstrapSearch }),
+    NgIconsModule.withIcons({
+      bootstrapChevronDown,
+      bootstrapSearch,
+      ionMenuSharp,
+    }),
   ],
   exports: [HeaderComponent, PsStoreMenuComponent],
 })

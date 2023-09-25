@@ -1,3 +1,4 @@
+@import "src/scss/_media-queries";
 @import "src/scss/_mixins";
 @import "src/scss/_themes";
 
@@ -33,13 +34,17 @@
     color: $c-dark-gray;
 
     @include flex($justifyContent: space-between);
+
+    @include mobile-only() {
+      @include flex($direction: column, $alignItems: flex-start, $gap: 10px);
+    }
   }
 
   button {
     background-color: $c-blue-1;
     color: $c-white;
 
-    padding: 2px 6px;
+    padding: 8px 16px;
     border-radius: 14px;
 
     font-size: 0.825rem;

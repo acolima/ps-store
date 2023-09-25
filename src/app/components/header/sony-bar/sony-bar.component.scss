@@ -1,3 +1,4 @@
+@import "src/scss/_media-queries";
 @import "src/scss/_mixins";
 @import "src/scss/_themes";
 
@@ -11,4 +12,6 @@
   img {
     width: 80px;
   }
+
+  @include hide-on-mobile();
 }

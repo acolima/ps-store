@@ -1,3 +1,4 @@
+@import "src/scss/_media-queries";
 @import "src/scss/_mixins";
 @import "src/scss/_themes";
 
@@ -11,6 +12,10 @@ footer {
 
   @include flex($direction: column, $alignItems: flex-start, $gap: 50px);
 
+  @include mobile-only() {
+    padding: 30px;
+  }
+
   .logo {
     width: 100%;
 
@@ -18,6 +23,10 @@ footer {
 
     div {
       @include flex($gap: 10px);
+    }
+
+    @include mobile-only() {
+      @include flex($direction: column);
     }
   }
 
@@ -43,6 +52,12 @@ footer {
         $justifyContent: baseline,
         $gap: 20px
       );
+    }
+
+    @include mobile-only() {
+      @include flex($direction: column, $gap: 50px, $alignItems: flex-start);
+
+      font-size: 14px;
     }
   }
 
