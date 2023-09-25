@@ -26,6 +26,10 @@
 
     overflow: scroll;
 
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
     a {
       padding: 2px 10px;
       border-radius: 16px;
